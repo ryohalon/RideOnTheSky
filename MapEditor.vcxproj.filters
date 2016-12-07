@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Utility">
+      <UniqueIdentifier>{2b93f725-c864-480e-81f3-70c2e7bf0016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Input">
+      <UniqueIdentifier>{d5042b04-ed8b-4d52-9ecf-0ce06f93ec20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Manager">
+      <UniqueIdentifier>{e4e06123-2405-41f0-a9ea-a7ba685045a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Manager\SoundManager">
+      <UniqueIdentifier>{902c13a1-0738-4367-be3b-e577a0e4c728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Manager\SoundManager\Sound">
+      <UniqueIdentifier>{f54efab9-f131-41dc-b8b2-d66b649f7014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Manager\TextureManager">
+      <UniqueIdentifier>{ebf57c89-2c1b-4538-918d-a4edbf9ab116}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Input\Key">
+      <UniqueIdentifier>{2cbbf4cd-bdaf-471c-90f1-ac29d6bc7afe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Input\Mouse">
+      <UniqueIdentifier>{057c6a12-3984-401c-aca4-80a0cb75accf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object">
+      <UniqueIdentifier>{09a586ea-2dea-4459-8e2e-bdcb45b9e69c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Manager\EasingManager">
+      <UniqueIdentifier>{67211a0a-b097-438d-9d7a-18500e836bf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Manager\EasingManager\Easing">
+      <UniqueIdentifier>{30e88c67-c62f-4d32-8d5f-9240b84a4e81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Time">
+      <UniqueIdentifier>{066af18b-ad46-4448-b46a-8b1c14c71ec1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Manager\EasingManager\EasingManageOne">
+      <UniqueIdentifier>{00d61aba-6abe-4c38-ad02-6be484e96a45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component">
+      <UniqueIdentifier>{4527326c-c03f-42e7-9b04-0e1df8684a03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component\Transform">
+      <UniqueIdentifier>{78a0e169-46e0-40eb-b162-2d9f67370af9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object\GameObject">
+      <UniqueIdentifier>{6c6c6c89-9cb8-4986-9109-c93f7e9df85c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object\GameObject\Grid">
+      <UniqueIdentifier>{de2f9041-f842-49ab-94b4-03b05e52687a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object\GameObject\SkyDome">
+      <UniqueIdentifier>{c10dc27c-3a47-41d4-9ec1-d537d12d9ebe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object\GameObject\MainCamera">
+      <UniqueIdentifier>{6a63b59c-a4f2-47a4-9c74-f8b9ae107587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Input\GamePad">
+      <UniqueIdentifier>{d342c9c1-2b63-4c01-8d9b-1c2fc11a08c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object\GameObject\CharacterBase">
+      <UniqueIdentifier>{e2658442-8e7b-4a86-b07c-d676e7e7b63e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object\GameObject\CharacterBase\Player">
+      <UniqueIdentifier>{c6e7d5f2-0625-49ae-bbe4-2743c5e8c07c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object\GameObject\CharacterBase\Enemy">
+      <UniqueIdentifier>{9f69b54e-3060-435c-8372-eecff73beac4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Key_Event\Key.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Mouse_Event\Mouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Input\Key\Key.h">
+      <Filter>Source Files\Utility\Input\Key</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Input\Mouse\Mouse.h">
+      <Filter>Source Files\Utility\Input\Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Manager\SoundManager\Sound\Sound.h">
+      <Filter>Source Files\Utility\Manager\SoundManager\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Manager\SoundManager\SoundManager.h">
+      <Filter>Source Files\Utility\Manager\SoundManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Manager\TextureManager\TextureManager.h">
+      <Filter>Source Files\Utility\Manager\TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Object\Object.h">
+      <Filter>Source Files\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Manager\EasingManager\Easing\Easing.h">
+      <Filter>Source Files\Utility\Manager\EasingManager\Easing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Manager\EasingManager\EasingManager.h">
+      <Filter>Source Files\Utility\Manager\EasingManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Time\Time.h">
+      <Filter>Source Files\Utility\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Manager\EasingManager\EasingManageOne\EasingManageOne.h">
+      <Filter>Source Files\Utility\Manager\EasingManager\EasingManageOne</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Object\Component\Transform\Transform.h">
+      <Filter>Source Files\Component\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Object\GameObject\GameObject.h">
+      <Filter>Source Files\Object\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Object\GameObject\Grid\Grid.h">
+      <Filter>Source Files\Object\GameObject\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Object\GameObject\SkyDome\SkyDome.h">
+      <Filter>Source Files\Object\GameObject\SkyDome</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Object\GameObject\MainCamera\MainCamera.h">
+      <Filter>Source Files\Object\GameObject\MainCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Input\GamePad\MyGamePad.h">
+      <Filter>Source Files\Utility\Input\GamePad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Object\GameObject\CharacterBase\Player\Player.h">
+      <Filter>Source Files\Object\GameObject\CharacterBase\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Object\GameObject\CharacterBase\CharacterBase.h">
+      <Filter>Source Files\Object\GameObject\CharacterBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Object\GameObject\CharacterBase\Enemy\Enemy.h">
+      <Filter>Source Files\Object\GameObject\CharacterBase\Enemy</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Utillity\Input\Key\Key.cpp">
+      <Filter>Source Files\Utility\Input\Key</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utillity\Input\Mouse\Mouse.cpp">
+      <Filter>Source Files\Utility\Input\Mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utillity\Manager\SoundManager\Sound\Sound.cpp">
+      <Filter>Source Files\Utility\Manager\SoundManager\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utillity\Manager\SoundManager\SoundManager.cpp">
+      <Filter>Source Files\Utility\Manager\SoundManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utillity\Manager\TextureManager\TextureManager.cpp">
+      <Filter>Source Files\Utility\Manager\TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utillity\Manager\EasingManager\EasingManager.cpp">
+      <Filter>Source Files\Utility\Manager\EasingManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MapEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Object\GameObject\Grid\Grid.cpp">
+      <Filter>Source Files\Object\GameObject\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Object\GameObject\SkyDome\SkyDome.cpp">
+      <Filter>Source Files\Object\GameObject\SkyDome</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Object\GameObject\MainCamera\MainCamera.cpp">
+      <Filter>Source Files\Object\GameObject\MainCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utillity\Input\GamePad\MyGamePad.cpp">
+      <Filter>Source Files\Utility\Input\GamePad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Object\GameObject\CharacterBase\Player\Player.cpp">
+      <Filter>Source Files\Object\GameObject\CharacterBase\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Object\GameObject\CharacterBase\CharacterBase.cpp">
+      <Filter>Source Files\Object\GameObject\CharacterBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Object\GameObject\CharacterBase\Enemy\Enemy.cpp">
+      <Filter>Source Files\Object\GameObject\CharacterBase\Enemy</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
