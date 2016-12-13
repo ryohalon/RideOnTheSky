@@ -8,8 +8,8 @@ void MainCamera::ChangeMode()
 	operation_mode = (operation_mode == OperationMode::KEY_MODE) ?
 		OperationMode::MOUSE_MODE : OperationMode::KEY_MODE;
 
-	transform.translate = maya_camera.getCamera().getEyePoint();
-	ci::Vec3f center_of_interest_point = maya_camera.getCamera().getCenterOfInterestPoint() - transform.translate;
+	transform.position = maya_camera.getCamera().getEyePoint();
+	ci::Vec3f center_of_interest_point = maya_camera.getCamera().getCenterOfInterestPoint() - transform.position;
 
 	theta.x = asin(center_of_interest_point.y);
 	theta.y;
@@ -27,21 +27,21 @@ void MainCamera::KeyMove()
 	// sin,cos‚ðŽg‚Á‚½ˆÚ“®‚ÌŒvŽZ•û–@
 	if (KEY.IsPressKey(ci::app::KeyEvent::KEY_a))
 	{
-		transform.translate += move_speed * ci::Vec3f(
+		transform.position += move_speed * ci::Vec3f(
 			cos(theta.y) * cos(theta.x),
 			0.0f,
 			-sin(theta.y) * cos(theta.x));
 	}
 	if (KEY.IsPressKey(ci::app::KeyEvent::KEY_d))
 	{
-		transform.translate -= move_speed * ci::Vec3f(
+		transform.position -= move_speed * ci::Vec3f(
 			cos(theta.y) * cos(theta.x),
 			0.0f,
 			-sin(theta.y) * cos(theta.x));
 	}
 	if (KEY.IsPressKey(ci::app::KeyEvent::KEY_w))
 	{
-		transform.translate += move_speed * ci::Vec3f(
+		transform.position += move_speed * ci::Vec3f(
 			sin(theta.y) * cos(theta.x),
 			sin(theta.x),
 			cos(theta.y) * cos(theta.x)
@@ -49,7 +49,7 @@ void MainCamera::KeyMove()
 	}
 	if (KEY.IsPressKey(ci::app::KeyEvent::KEY_s))
 	{
-		transform.translate -= move_speed * ci::Vec3f(
+		transform.position -= move_speed * ci::Vec3f(
 			sin(theta.y) * cos(theta.x),
 			sin(theta.x),
 			cos(theta.y) * cos(theta.x)
@@ -58,7 +58,7 @@ void MainCamera::KeyMove()
 	//////////////////////////////////////////////////////////////////////
 
 	ci::CameraPersp camera_persp = maya_camera.getCamera();
-	camera_persp.setEyePoint(transform.translate);
+	camera_persp.setEyePoint(transform.position);
 	maya_camera.setCurrentCam(camera_persp);
 }
 
@@ -154,9 +154,9 @@ MainCamera::~MainCamera()
 
 void MainCamera::Setup()
 {
-	transform.translate = ci::Vec3f(0.0f, 0.0f, -10.0f);
+	transform.position = ci::Vec3f(0.0f, 0.0f, -10.0f);
 	ci::CameraPersp camera_persp;
-	camera_persp.setEyePoint(transform.translate);
+	camera_persp.setEyePoint(transform.position);
 	camera_persp.setCenterOfInterestPoint(camera_persp.getEyePoint()
 		+ eye_direction);
 	camera_persp.setPerspective(45.0f,
@@ -173,9 +173,9 @@ void MainCamera::Setup(const ci::Vec3f &pos,
 	const float &near_plane,
 	const float &far_plane)
 {
-	transform.translate = pos;
+	transform.position = pos;
 	ci::CameraPersp camera_persp;
-	camera_persp.setEyePoint(transform.translate);
+	camera_persp.setEyePoint(transform.position);
 
 	this->eye_direction = eye_direction;
 	camera_persp.setCenterOfInterestPoint(camera_persp.getEyePoint()

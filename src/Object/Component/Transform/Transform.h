@@ -7,17 +7,17 @@ class Transform
 public:
 
 	Transform() :
-		translate(ci::Vec3f::zero()),
-		rotate(ci::Vec3f::zero()),
+		position(ci::Vec3f::zero()),
+		angle(ci::Vec3f::zero()),
 		scale(ci::Vec3f::one())
 	{
 
 	}
-	Transform(const ci::Vec3f &translate,
-		const ci::Vec3f &rotate,
+	Transform(const ci::Vec3f &position,
+		const ci::Vec3f &angle,
 		const ci::Vec3f &scale) :
-		translate(translate),
-		rotate(rotate),
+		position(position),
+		angle(angle),
 		scale(scale)
 	{
 
@@ -25,9 +25,9 @@ public:
 	~Transform() {}
 
 	// ç¿ïW
-	ci::Vec3f translate;
+	ci::Vec3f position;
 	// âÒì]
-	ci::Vec3f rotate;
+	ci::Vec3f angle;
 	// ëÂÇ´Ç≥
 	ci::Vec3f scale;
 };

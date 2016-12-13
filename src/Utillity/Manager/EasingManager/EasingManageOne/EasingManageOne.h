@@ -1,6 +1,6 @@
 #pragma once
 #include "../Easing/Easing.h"
-#include "../../../Time/Time.h"
+#include "../../TimeManager/TimeManager.h"
 
 
 class EasingManageOne
@@ -72,7 +72,7 @@ public:
 		if (is_end)
 			return;
 
-		time += TIME.GetDeltaTime();
+		time += TimeManager::Get().GetDeltaTime();
 		if (DelayTime() == 1.0f)
 			is_end = true;
 

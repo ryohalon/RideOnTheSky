@@ -46,9 +46,6 @@
     <Filter Include="Source Files\Utility\Manager\EasingManager\Easing">
       <UniqueIdentifier>{30e88c67-c62f-4d32-8d5f-9240b84a4e81}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Utility\Time">
-      <UniqueIdentifier>{066af18b-ad46-4448-b46a-8b1c14c71ec1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Utility\Manager\EasingManager\EasingManageOne">
       <UniqueIdentifier>{00d61aba-6abe-4c38-ad02-6be484e96a45}</UniqueIdentifier>
     </Filter>
@@ -81,6 +78,15 @@
     </Filter>
     <Filter Include="Source Files\Object\GameObject\CharacterBase\Enemy">
       <UniqueIdentifier>{9f69b54e-3060-435c-8372-eecff73beac4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Input\LeapMotion">
+      <UniqueIdentifier>{46dd04f2-9e92-4c24-958f-240cfc8743ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Input\LeapMotion\LeapController">
+      <UniqueIdentifier>{ec4ae8bf-5a5b-4be8-a1f3-73306e1b6f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Manager\TimeManager">
+      <UniqueIdentifier>{066af18b-ad46-4448-b46a-8b1c14c71ec1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -117,9 +123,6 @@
     <ClInclude Include="..\src\Utillity\Manager\EasingManager\EasingManager.h">
       <Filter>Source Files\Utility\Manager\EasingManager</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Utillity\Time\Time.h">
-      <Filter>Source Files\Utility\Time</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Utillity\Manager\EasingManager\EasingManageOne\EasingManageOne.h">
       <Filter>Source Files\Utility\Manager\EasingManager\EasingManageOne</Filter>
     </ClInclude>
@@ -149,6 +152,21 @@
     </ClInclude>
     <ClInclude Include="..\src\Object\GameObject\CharacterBase\Enemy\Enemy.h">
       <Filter>Source Files\Object\GameObject\CharacterBase\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Input\LeapMotion\Cinder-LeapMotion.h">
+      <Filter>Source Files\Utility\Input\LeapMotion</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Input\LeapMotion\Leap.h">
+      <Filter>Source Files\Utility\Input\LeapMotion</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Input\LeapMotion\LeapMath.h">
+      <Filter>Source Files\Utility\Input\LeapMotion</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Input\LeapMotion\LeapController\LeapController.h">
+      <Filter>Source Files\Utility\Input\LeapMotion\LeapController</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utillity\Manager\TimeManager\TimeManager.h">
+      <Filter>Source Files\Utility\Manager\TimeManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -203,6 +221,12 @@
     </ClCompile>
     <ClCompile Include="..\src\Object\GameObject\CharacterBase\Enemy\Enemy.cpp">
       <Filter>Source Files\Object\GameObject\CharacterBase\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utillity\Input\LeapMotion\Cinder-LeapMotion.cpp">
+      <Filter>Source Files\Utility\Input\LeapMotion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utillity\Input\LeapMotion\LeapController\LeapController.cpp">
+      <Filter>Source Files\Utility\Input\LeapMotion\LeapController</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

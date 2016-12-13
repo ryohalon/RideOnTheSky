@@ -1,6 +1,7 @@
 #pragma once
 #include "cinder/Matrix.h"
 #include "cinder/gl/gl.h"
+#include "cinder/gl/Material.h"
 #include "../Object.h"
 #include "../Component/Transform/Transform.h"
 #include "../../Utillity/Manager/SoundManager/SoundManager.h"
@@ -15,6 +16,7 @@ protected:
 
 	Transform transform;
 	ci::Matrix44f matrix;
+	ci::gl::Material material;
 
 	bool is_stop;
 
@@ -43,8 +45,8 @@ public:
 
 	void UpdateMatrix()
 	{
-		ci::Matrix44f mtranslate = ci::Matrix44f::createTranslation(transform.translate);
-		ci::Matrix44f mrotate = ci::Matrix44f::createRotation(transform.rotate);
+		ci::Matrix44f mtranslate = ci::Matrix44f::createTranslation(transform.position);
+		ci::Matrix44f mrotate = ci::Matrix44f::createRotation(transform.angle);
 		ci::Matrix44f mscale = ci::Matrix44f::createScale(transform.scale);
 
 		matrix = mtranslate * mrotate * mscale;

@@ -191,4 +191,9 @@ namespace Easing
 	static const float& SineInOut(float t, const float& b, const float& e) {
 		return -(e - b) / 2.f * (std::cos(float(M_PI) * t) - 1.f) + b;
 	}
+
+	static const ci::Vec2f& QuadOut(float t, const ci::Vec2f& b, const ci::Vec2f& e) {
+		return ci::Vec2f(-(e.x - b.x) * t * (t - 2) + b.x,
+			-(e.y - b.y) * t * (t - 2) + b.y);
+	}
 };
