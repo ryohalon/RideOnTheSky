@@ -68,7 +68,7 @@ void MapEditor::update()
 	grid.Update();
 
 	MOUSE.FlushInput();
-	KEY.FlushInput();
+	Key::Get().FlushInput();
 }
 
 void MapEditor::draw()
@@ -111,12 +111,12 @@ void MapEditor::mouseUp(ci::app::MouseEvent event)
 
 void MapEditor::keyDown(ci::app::KeyEvent event)
 {
-	KEY.PushKey(event);
+	Key::Get().PushKey(event);
 }
 
 void MapEditor::keyUp(ci::app::KeyEvent event)
 {
-	KEY.PullKey(event);
+	Key::Get().PullKey(event);
 }
 
 CINDER_APP_NATIVE(MapEditor, ci::app::RendererGl)

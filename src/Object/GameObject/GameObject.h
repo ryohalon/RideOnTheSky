@@ -24,10 +24,12 @@ public:
 
 	Transform GetTransform() const { return transform; }
 	ci::Matrix44f GetMatrix() const { return matrix; }
+	ci::gl::Material GetMaterial() const { return material; }
 	bool GetIsStop() const { return is_stop; }
 
 	void SetTransform(const Transform &transform_) { transform = transform_; }
 	void SetMatrix(const ci::Matrix44f &matrix_) { matrix = matrix_; }
+	void SetMaterial(const ci::gl::Material &material_) { material = material_; }
 	void SetIsStop(const bool &is_stop_) { is_stop = is_stop_; }
 
 public:

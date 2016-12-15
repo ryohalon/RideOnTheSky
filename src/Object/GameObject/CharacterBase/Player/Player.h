@@ -1,6 +1,7 @@
 #pragma once
 #include "../CharacterBase.h"
 #include "../../../../Utillity/Input/LeapMotion/LeapController/LeapController.h"
+#include "../../../../Utillity/Input/Key/Key.h"
 
 
 
@@ -8,10 +9,17 @@ class Player : public CharacterBase
 {
 private:
 
+	enum class OperationType
+	{
+		LEAP,
+		KEY
+	};
+	OperationType operation_type;
+
 	float hand_exist_count;
 	float hand_exist_take_time;
 	ci::Vec2f hand_pos_by_ratio;
-	float interval_time;
+	int interval_time;
 
 	ci::Vec3f prev_hand_pos;
 	ci::Vec2f prev_hand_pos_by_ratio;
@@ -43,6 +51,12 @@ private:
 
 	void CollisionPlayerToCourse();
 
+	void ChangeOperationType();
+
+public:
+
+	ci::Vec3f GetWorldPosition() const { return matrix * ci::Vec3f::zero(); }
+
 public:
 
 	Player();
@@ -50,7 +64,7 @@ public:
 
 	void Setup() override;
 	void Setup(const float &hand_exist_take_time_,
-		const float &interval_time_,
+		const int &interval_time_,
 		const ci::Vec2f &move_range_,
 		const float &start_delay_take_time_,
 		const float &course_rad_,

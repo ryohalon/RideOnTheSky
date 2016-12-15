@@ -5,8 +5,6 @@
 
 
 
-#define KEY Key::Get()
-
 
 class Key
 {

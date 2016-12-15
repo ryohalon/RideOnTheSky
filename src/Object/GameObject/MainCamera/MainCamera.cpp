@@ -2,7 +2,7 @@
 
 void MainCamera::ChangeMode()
 {
-	if (!KEY.IsPushKey(ci::app::KeyEvent::KEY_SPACE))
+	if (!Key::Get().IsPushKey(ci::app::KeyEvent::KEY_SPACE))
 		return;
 
 	operation_mode = (operation_mode == OperationMode::KEY_MODE) ?
@@ -25,21 +25,21 @@ void MainCamera::KeyMove()
 
 	//////////////////////////////////////////////////////////////////////
 	// sin,cosを使った移動の計算方法
-	if (KEY.IsPressKey(ci::app::KeyEvent::KEY_a))
+	if (Key::Get().IsPressKey(ci::app::KeyEvent::KEY_a))
 	{
 		transform.position += move_speed * ci::Vec3f(
 			cos(theta.y) * cos(theta.x),
 			0.0f,
 			-sin(theta.y) * cos(theta.x));
 	}
-	if (KEY.IsPressKey(ci::app::KeyEvent::KEY_d))
+	if (Key::Get().IsPressKey(ci::app::KeyEvent::KEY_d))
 	{
 		transform.position -= move_speed * ci::Vec3f(
 			cos(theta.y) * cos(theta.x),
 			0.0f,
 			-sin(theta.y) * cos(theta.x));
 	}
-	if (KEY.IsPressKey(ci::app::KeyEvent::KEY_w))
+	if (Key::Get().IsPressKey(ci::app::KeyEvent::KEY_w))
 	{
 		transform.position += move_speed * ci::Vec3f(
 			sin(theta.y) * cos(theta.x),
@@ -47,7 +47,7 @@ void MainCamera::KeyMove()
 			cos(theta.y) * cos(theta.x)
 		);
 	}
-	if (KEY.IsPressKey(ci::app::KeyEvent::KEY_s))
+	if (Key::Get().IsPressKey(ci::app::KeyEvent::KEY_s))
 	{
 		transform.position -= move_speed * ci::Vec3f(
 			sin(theta.y) * cos(theta.x),
@@ -69,13 +69,13 @@ void MainCamera::KeyRotate()
 
 	//////////////////////////////////////////////////////////////////////
 	// sin,cosを使ったFPS視点回転の計算方法
-	if (KEY.IsPressKey(ci::app::KeyEvent::KEY_j))
+	if (Key::Get().IsPressKey(ci::app::KeyEvent::KEY_j))
 		theta.y += rotate_speed.y;
-	if (KEY.IsPressKey(ci::app::KeyEvent::KEY_l))
+	if (Key::Get().IsPressKey(ci::app::KeyEvent::KEY_l))
 		theta.y -= rotate_speed.y;
-	if (KEY.IsPressKey(ci::app::KeyEvent::KEY_i))
+	if (Key::Get().IsPressKey(ci::app::KeyEvent::KEY_i))
 		theta.x = std::min(0.99f, theta.x + rotate_speed.x);
-	if (KEY.IsPressKey(ci::app::KeyEvent::KEY_k))
+	if (Key::Get().IsPressKey(ci::app::KeyEvent::KEY_k))
 		theta.x = std::max(-0.99f, theta.x - rotate_speed.x);
 
 	eye_direction = 1.0f * ci::Vec3f(
@@ -127,7 +127,7 @@ void MainCamera::MouseMoveAndRotate()
 
 void MainCamera::Reset()
 {
-	if (!KEY.IsPushKey(ci::app::KeyEvent::KEY_ESCAPE))
+	if (!Key::Get().IsPushKey(ci::app::KeyEvent::KEY_ESCAPE))
 		return;
 
 	ci::CameraPersp camera_persp;

@@ -119,6 +119,16 @@ void Player::CollisionPlayerToCourse()
 	transform.position.y = player_pos.y;
 }
 
+void Player::ChangeOperationType()
+{
+	if (!Key::Get().IsPushKey(ci::app::KeyEvent::KEY_ESCAPE))
+		return;
+
+	operation_type = (operation_type == OperationType::LEAP) ?
+		OperationType::KEY :
+		OperationType::LEAP;
+}
+
 Player::Player()
 {
 
@@ -135,7 +145,7 @@ void Player::Setup()
 }
 
 void Player::Setup(const float & hand_exist_take_time_,
-	const float & interval_time_,
+	const int & interval_time_,
 	const ci::Vec2f & move_range_,
 	const float & start_delay_take_time_,
 	const float & course_rad_,
@@ -147,6 +157,7 @@ void Player::Setup(const float & hand_exist_take_time_,
 	const float & max_dot_product_range_,
 	const float & dash_range_)
 {
+	operation_type = OperationType::KEY;
 	hand_exist_count = 0.0f;
 	hand_exist_take_time = hand_exist_take_time_;
 	hand_pos_by_ratio = ci::Vec2f::zero();
